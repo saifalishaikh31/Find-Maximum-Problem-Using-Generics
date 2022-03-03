@@ -47,5 +47,25 @@ namespace MaximumNumberTest
             float maximumFloat = max.FloatMax(2.2f, 1.3f, 5.0f);
             Assert.AreEqual(5.0, maximumFloat);
         }
+        [Test]
+        public void GivenThreeStringFirstPosition_WhenChecked_ThenShouldReturnMax()
+        {
+            string maximumStr = max.StringMax("Peach", "Apple", "Banana");
+            Assert.AreEqual("Peach", maximumStr);
+        }
+
+        [Test]
+        public void GivenThreeStringSecondPosition_WhenChecked_ThenShouldReturnMax()
+        {
+            string maximumStr = max.StringMax("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", maximumStr);
+        }
+
+        [Test]
+        public void GivenThreeStringThirdPosition_WhenChecked_ThenShouldReturnMax()
+        {
+            string maximumStr = max.StringMax("Apple", "Banana", "Peach");
+            Assert.AreEqual("Peach", maximumStr);
+        }
     }
 }
