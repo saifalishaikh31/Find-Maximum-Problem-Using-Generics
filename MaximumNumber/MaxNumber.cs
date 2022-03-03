@@ -9,7 +9,17 @@ namespace MaximumNumber
 {
     public class MaxNumber<T> where T : IComparable
     {
-        public T FindMax(T firstStr, T secondStr, T thirdStr, [Optional] T fourthStr)
+        public T firstStr, secondStr, thirdStr, fourthStr;
+
+        public MaxNumber(T firstStr, T secondStr, T thirdStr, [Optional] T fourthStr)
+        {
+            this.firstStr = firstStr;
+            this.secondStr = secondStr;
+            this.thirdStr = thirdStr;
+            this.fourthStr = fourthStr;
+        }
+
+        public T FindMax()
         {
             if (firstStr.CompareTo(secondStr) > 0 && firstStr.CompareTo(thirdStr) > 0 && firstStr.CompareTo(fourthStr) > 0)
             {
@@ -25,5 +35,11 @@ namespace MaximumNumber
             }
             return fourthStr;
         }
+        public void Print(T var)
+        {
+
+            Console.WriteLine(var);
+        }
+
     }
 }
