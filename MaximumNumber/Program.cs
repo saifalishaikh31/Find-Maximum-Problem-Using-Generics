@@ -10,6 +10,7 @@ namespace MaximumNumber
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
